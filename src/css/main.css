@@ -1,7 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +23,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -37,29 +36,101 @@ ol, ul {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+a {
+  text-decoration: none;
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   background-color: #e0e8ff;
   background-image: url("../../images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: "Red Hat Display", sans-serif;
+  font-size: 0.9375rem;
   color: #7280a7;
+}
+
+.card {
+  width: 87.2vw;
+  background-color: #f5f7ff;
+  border-radius: 1.25rem;
+  box-shadow: 0 30px 20px rgba(31, 47, 86, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+.card .hero {
+  width: 100%;
+  height: 10rem;
+  background-image: url("../../images/illustration-hero.svg");
+  background-size: cover;
+  background-position: center;
+}
+.card .container {
+  padding: 2.25rem 1.5rem;
+}
+.card .intro {
+  padding: 0 4vw;
+}
+.card .intro h1 {
+  font-size: 1.375rem;
+  font-weight: 900;
+  color: #1f2f56;
+  margin-bottom: 1.25rem;
+}
+.card .intro p {
+  line-height: 1.6rem;
+}
+.card .plan {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 4vw;
+  font-size: 0.875rem;
+}
+.card .plan img {
+  margin-right: 1.25rem;
+}
+.card .plan-title {
+  font-weight: 900;
+  color: #1f2f56;
+  margin-bottom: 0.5rem;
+}
+.card .plan-change {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #3829e0;
+  margin-left: auto;
+  text-decoration: underline;
+}
+.card .plan-change:hover {
+  color: rgba(56, 41, 224, 0.7);
+  text-decoration: none;
+}
+.card .payment {
+  font-weight: 700;
+}
+.card .payment-button {
+  display: block;
+  width: 100%;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  background-color: #3829e0;
+  border-radius: 0.625rem;
+  box-shadow: 0 20px 10px rgba(56, 41, 224, 0.12);
+  margin-bottom: 1.625rem;
+  color: #f5f7ff;
+}
+.card .payment-button:hover {
+  background-color: rgba(56, 41, 224, 0.7);
+}
+.card .payment-cancel {
+  color: #7280a7;
+}
+.card .payment-cancel:hover {
+  color: #1f2f56;
 }
 
 /*# sourceMappingURL=main.css.map */

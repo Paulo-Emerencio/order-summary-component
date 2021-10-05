@@ -1,0 +1,93 @@
+@use '../util' as *;
+
+.card {
+   width: 87.2vw;
+   background-color: $very-pale-blue;
+   border-radius: rem(20);
+   box-shadow: 0 30px 20px rgba($dark-blue, .1);
+   overflow: hidden;
+
+   text-align: center;
+
+   .hero {
+      width: 100%;
+      height: rem(160);
+      background-image: url('../../images/illustration-hero.svg');
+      background-size: cover;
+      background-position: center;
+   }
+
+   .container {
+      padding: rem(36) rem(24);
+   }
+
+   .intro {
+      @include intro-plan-container;
+   
+      h1 {
+         font-size: rem(22);
+         font-weight: $fw-black;
+         color: $dark-blue;
+         margin-bottom: rem(20);
+      }
+      p {
+         line-height: 1.6rem;
+      }
+   }
+
+   .plan {
+      display: flex;
+      align-items: center;
+      @include intro-plan-container($ypad: rem(40));
+
+      font-size: rem(14);
+
+      img {
+         margin-right: rem(20);
+      }
+      &-title {
+         font-weight: $fw-black;
+         color: $dark-blue;
+         margin-bottom: rem(8);
+      }
+      &-change {
+         font-size: rem(13);
+         font-weight: $fw-bold;
+         color: $bright-blue;
+         margin-left: auto;
+         text-decoration: underline;
+
+         &:hover {
+            color: rgba($bright-blue, .7);
+            text-decoration: none;
+         }
+      }
+   }
+
+   .payment {
+      font-weight: $fw-bold;
+
+      &-button {
+         display: block;
+         width: 100%;
+         height: rem(50);
+         line-height: rem(50);
+         background-color: $bright-blue;
+         border-radius: rem(10);
+         box-shadow: 0 20px 10px rgba($bright-blue, .12);
+         margin-bottom: rem(26);
+         color: $very-pale-blue;
+
+         &:hover {
+            background-color: rgba($bright-blue, .7);
+         }
+      }
+      &-cancel {
+         color: $desaturated-blue;
+
+         &:hover {
+            color: $dark-blue;
+         }
+      }
+   }
+}

@@ -1,6 +1,10 @@
 @use '../util' as *;
 
 body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
    min-height: 100vh;
    background-color: $pale-blue;
    background-image: url('../../images/pattern-background-mobile.svg');
@@ -8,5 +12,6 @@ body {
    background-size: 100%;
 
    font-family: $font;
+   font-size: rem(15);
    color: $desaturated-blue;
 }
