@@ -1,3 +1,11 @@
-@mixin intro-plan-container($ypad: 0, $xpad: 4vw) {
+@use 'typography' as *;
+@use 'colors' as *;
+
+@mixin inner-container($ypad: 0, $xpad: calc(10.65% - 13.7px)) {
    padding: $ypad $xpad;
+}
+
+@mixin title-style {
+   font-weight: $fw-black;
+   color: $dark-blue;
 }

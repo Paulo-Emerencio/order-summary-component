@@ -1,0 +1,17 @@
+@use '../util' as *;
+
+.attribution {
+   position: absolute;
+   width: 100%;
+   text-align: center;
+   font-size: rem($fs-attr);
+   transform: translateY(rem(-$fs-attr * 2));
+
+   a {
+      color: $dark-blue;
+      &:hover {
+         color: $bright-blue;
+         text-decoration: underline;
+      }
+   }
+}
